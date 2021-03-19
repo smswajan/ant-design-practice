@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import {   Row,  Col, Space } from 'antd';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+import AddRegularTransaction from './Views/AddRegularTransaction/AddRegularTransaction';
+
+import "../node_modules/antd/dist/antd.less"
+import "../node_modules/antd//lib/style/themes/default.less"
+
+import "./styles/default-colors.less"
+import './App.less';
+import AllTransactions from './Views/AllTransactions/AllTransactions';
+
+
+
+const App = () => (
+  <>
+  <div className="container">
+  <Row>
+    <Col span={24}>
+  {/* <AddRegularTransaction/> */}
+  <AllTransactions/>
+  </Col>
+  </Row>
+  </div>
+  </>
+);
 
 export default App;
